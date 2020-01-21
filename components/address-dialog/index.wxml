@@ -1,0 +1,32 @@
+<!--components/address-dialog/index.wxml-->
+<view class='root'>
+    <view class='dialog'>
+      <!-- 地区选择标题 -->
+      <view class='top-box'>
+        <text class='region-header'>地区选择</text>
+        <view class='close-box' bindtap='close'>
+          <image class='close' src='../../images/close.png'></image>
+        </view>
+      </view>
+      <!-- 地区选择标题 -->
+      <!-- 广东全省 -->
+      <view class='province-box {{cityDefault.id === cityId ? "check-city" : ""}}' bindtap='cityCheck' data-item='{{cityDefault}}'>
+        广东省
+      </view>
+      <!-- 广东全省 -->
+      <!-- 广东各地方 -->
+      <view class='city-bigbox'>
+        <view class='city-box' wx:for='{{cityList}}' wx:key='index'>
+          <view class='city-title'>{{item.type}}</view>
+          <view class='city-con'>
+            <text wx:for='{{item.children}}' wx:key='index'
+            bindtap='cityCheck' data-item='{{item}}'
+            class='{{item.id === cityId ? "check-city" : ""}}'>{{item.city}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 广东各地方 -->
+      <button bindtap='confirm' class='confirm-btn'>确认</button>
+    </view>
+</view>
+

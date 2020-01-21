@@ -1,0 +1,28 @@
+<template name="annoItem">
+  <view class='item'>
+    <view class='top'>
+      <view class='row'>
+        <text>公告名称:</text>
+        <text class='title'>{{gongGaoMingCheng}}</text>
+      </view>
+      <view class='row'>
+        <text>公告类型:</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 1}}'>{{isXuYaoZiGeYuShen === 1 ? '资格预审公告' : '资格后审公告'}}{{ gongGaoType === 4 ? '更正' : ''}}</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 2}}'>邀请招标公告{{gongGaoType === 4 ? '更正' : ''}}</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 3}}'>竞争性谈判公告{{gongGaoType === 4 ? '更正' : ''}}</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 4}}'>单一来源公告{{gongGaoType === 4 ? '更正' : ''}}</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 5}}'>询价采购公告{{gongGaoType === 4 ? '更正' : ''}}</text>
+        <text class='title' wx:if='{{zhaoBiaoFangShi === 6}}'>竞争性磋商公告{{gongGaoType === 4 ? '更正' : ''}}</text>
+      </view>
+      <view class='row'>
+        <text>项目地区:</text>
+        <text class='title'>{{allAddress}}</text>
+      </view>
+      <view class='row'>
+        <text>更新时间:</text>
+        <text class='title'>{{shangBaoTime}}</text>
+      </view>
+    </view>
+    <text class='look-btn' data-url='{{detailUrl}}' data-id='{{id}}' bindtap="handleLookClick">查看公告</text>
+  </view>
+</template>

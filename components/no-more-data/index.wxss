@@ -1,0 +1,25 @@
+/* components/no-more-data/index.wxss */
+.list-no-data {
+  width: 100%;
+  color: #bbb;
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+  -webkit-box-orient: horizontal;
+  text-align: center;
+  padding: 24rpx;
+  background-color: #f3f4f8;
+  box-sizing: border-box;
+}
+.list-no-data>text {
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.list-no-data>text::before, .list-no-data>text::after {
+  display: inline-block;
+  content: '';
+  border-top: 1rpx solid #bbb;
+  width: 76rpx;
+  margin: 7rpx 24rpx;
+}

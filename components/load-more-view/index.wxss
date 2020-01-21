@@ -1,0 +1,32 @@
+/* components/load-more-view/index.wxss */
+.tloader-loading:after {
+  content: '正在加载...';
+  vertical-align: middle;
+}
+.tloader-loading {
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  font-size: 12px;
+  color: #666;
+}
+.tloader-loading .ui-loading {
+  font-size: 20px;
+  margin-right: .6rem;
+}
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ui-loading {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #666;
+  border-top-color: #fff;
+  border-radius: 100%;
+  animation: circle .8s infinite linear;
+}

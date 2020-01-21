@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/annoucement/index",
+    "pages/logs/logs",
+    "pages/project/index",
+    "pages/my/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f3f4f8",
+    "navigationBarTitleText": "小程序学习项目",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "onReachBottomDistance": 0
+  },
+  "tabBar": {
+    "color": "#8f8f8f",
+    "selectedColor": "#008eff",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/annoucement/index",
+        "text": "功能效果一",
+        "iconPath": "images/gogngao_hui.png",
+        "selectedIconPath": "images/gogngao_lan.png"
+      },
+      {
+        "pagePath": "pages/project/index",
+        "text": "功能效果二",
+        "iconPath": "images/xiangmu_hui.png",
+        "selectedIconPath": "images/xiangmu_lan.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

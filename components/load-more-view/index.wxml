@@ -1,0 +1,5 @@
+<!--components/load-more-view/index.wxml-->
+<view class='tloader-footer' wx:if='{{isShowLoadMore}}'>
+  <view class="tloader-loading" wx:if='{{hasMoreData}}'><text class="ui-loading"/></view>
+  <no-more-data wx:else></no-more-data>
+</view>

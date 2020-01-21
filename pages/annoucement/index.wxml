@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<import src="item/item.wxml" />
+
+<view style='height:{{contentHeight}}px'>
+  <block>
+    <!-- 搜索 -->
+      <view class="search-box">
+        <view class="header-title-search">一：搜索功能</view>
+        <view class='search'>
+          <input placeholder='输入公告名称关键词进行查询' bindinput ="searchInput"></input>
+          <image src='../../images/souoshuo.png' bindtap='handleSearch'></image>
+        </view>
+      </view>
+    <!-- 搜索 -->
+    <!-- banner -->
+    <view>
+       <view class="headertitle">二：轮播功能</view>
+       <swiper
+        class='slide-root'
+        current="{{current}}"
+        circular='{{circular}}'
+        indicator-dots='{{indicatorDots}}'
+        autoplay='{{autoplay}}'
+        interval='{{interval}}'
+        duration='{{duration}}'>
+        <swiper-item wx:for='{{bannerList}}' wx:key='index' data-url='{{item.linkUrl}}' bindtap='handleBannerClick'>
+          <image src='{{item.relativePath}}' class='slide-image' lazy-load='{{true}}'/>
+         </swiper-item>
+       </swiper>
+    </view>
+    <!-- banner -->
+    <!-- 新消息提示 -->
+    <view class='new-message-bigbox' bindtap='newSysteBtn'>
+      <image src='../../images/laba.png' class='broadcast-icon'></image>
+      <view class="news-box">
+        <text wx:if='{{!isScrollEnable}}'>{{msg.content}}</text>
+        <view class="marquee_box" wx:if='{{isScrollEnable}}'>
+          <view class="marquee_text" style="transform: translateX({{-marqueeDistance}}px)">
+            <text>{{msg.content}}</text>
+          </view>
+        </view>
+      </view>
+      <image src='../../images/jiantou.png' class='arrow-icon'></image>
+    </view>
+    <!-- 新消息提示 -->
+    <!-- 日历 -->
+    <view class="calendar-box">
+      <view class="headertitle">三：日历功能</view>
+      <calendar
+      calendarConfig="{{calendarConfig}}"
+      bind:onTapDay="onTapDay"
+      bind:afterTapDay="afterTapDay"
+      bind:onSwipe="onSwipe"
+      bind:whenChangeWeek="whenChangeWeek"
+      bind:whenChangeMonth="whenChangeMonth"
+      bind:afterCalendarRender="afterCalendarRender"
+      ></calendar>
+    </view>
+    <!-- 日历 -->
+    <!-- 时间地址 -->
+    <view class='time-address'>
+      <image class='time-icon' src='../../images/rili.png'></image>
+      <text>{{year}}年{{month}}月{{day}}日</text>
+      <text class='week'>星期{{week}}</text>
+      <view class='address' bindtap='handleAddresClick'>
+        <image class='address-icon' src='../../images/dingwei.png'></image>
+        <text class='address-text'>{{address}}</text>
+      </view>
+    </view>
+    <!-- 时间地址 -->
+    <!-- 公告 -->
+    <view class='anno-list'>
+      <view class='anno-item'wx:for="{{annoList}}" wx:key="{{item.objectId}}">
+        <template is="annoItem" data="{{...item}}" />
+      </view>
+    </view>
+     <!-- 公告 -->
+  </block>
+  <!-- 地址弹框 -->
+  <address-dialog wx:if='{{addressDialogVisable}}' cityId='{{provinceId ? provinceId : cityId}}' bindcloseDialog='closeDialog'
+  bindhandleConfirm='handleConfirm'></address-dialog>
+  <!-- 地址弹框 -->
+</view>

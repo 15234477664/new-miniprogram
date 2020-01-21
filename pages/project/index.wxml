@@ -1,0 +1,18 @@
+<!--pages/project/index.wxml-->
+<view class='my-list-bigbox'>
+    <button class='my-list-box my-list-box-btn' open-type='feedback'>
+      <image src='../../images/yijian.png' class='list-icon'></image>
+      <text class='list-title'>意见反馈</text>
+      <image src='../../images/jiantou.png' class='jiantou'></image>
+    </button>
+    <view>
+      <view class="zan-font-16 my-ib" bindtap="myStarChoose">
+          <block wx:for="{{starMap}}">
+              <text wx:if="{{star>=index+1}}" style="padding-right: .5em" class="zan-c-red" data-star="{{index+1}}">★</text>
+              <text wx:if="{{star<index+1}}" style="padding-right: .5em" class="zan-c-gray-dark" data-star="{{index+1}}">☆</text>
+          </block>
+      </view>
+      <!--★-->
+      <text class="zan-c-gray-dark">{{starMap[star-1]}}</text>
+    </view>    
+</view>

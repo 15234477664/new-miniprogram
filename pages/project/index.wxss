@@ -1,0 +1,67 @@
+.my-list-bigbox{
+  width: 100%;
+}
+.my-list-box{
+  width: 100%!important;
+  height: 125rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-align: left;
+}
+.my-list-box-btn::after{
+  border: none;
+}
+.my-list-box-btn{
+  border-radius:0;
+}
+.list-title{
+  font-size: 30rpx;
+  color: #434343;
+  flex: 1;
+  margin-left: 24rpx;
+}
+.list-icon{
+  width: 50rpx;
+  height: 39rpx;
+}
+.jiantou{
+  width: 13rpx;
+  height: 20rpx;
+}
+.exit-btton{
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  text-align: center;
+}
+.nologin-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-left: 20rpx;
+}
+.nologin-box .login {
+  color: white;
+  text-align: center;
+  width: 168rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  border-radius: 54rpx;
+  font-size: 28rpx;
+  background-color: #96c3f0;
+}
+.nologin-box .txt {
+  color: #dfebfb;
+  font-size: 21rpx;
+  margin-top: 15rpx;
+}

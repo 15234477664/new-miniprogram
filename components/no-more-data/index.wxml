@@ -1,0 +1,5 @@
+<!--components/no-more-data/index.wxml-->
+<view class="list-no-data">
+  <text >到底了哦</text>
+</view>
+

@@ -1,0 +1,108 @@
+/* components/address-dialog/index.wxss */
+.root {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  top:0px;
+  background-color:rgba(0,0,0,0.5);
+  text-align: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+.dialog {
+  width: 75%;
+  height: 760rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.dialog .top-box{
+  width: 100%;
+  height: 103rpx;
+  line-height: 103rpx;
+  position: relative;
+}
+.region-header{
+  font-size: 32rpx;
+  color: #333333;
+}
+.close-box{
+  width: 60rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dialog .close {
+  width: 22rpx;
+  height: 22rpx;
+}
+.confirm-btn{
+  width: 200rpx;
+  height: 60rpx;
+  background: #2b80ff;
+  color: #ffffff;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+.province-box{
+  width: 90%;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0 23rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+  color: #666666;
+  font-size: 28rpx;
+  text-align: left;
+}
+.check-city{
+  color: #2b80ff;
+}
+.city-bigbox{
+  width: 90%;
+  padding: 0 23rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 46rpx;
+}
+.city-box{
+  display: block;
+  text-align: left;
+  min-width: 50%;
+  max-width: 100%;
+  height: 26rpx;
+  line-height: 26rpx;
+  float: left;
+  margin-top: 40rpx;
+}
+.city-title{
+  display: inline-block;
+  width: 20rpx;
+  text-align: left;
+  font-size: 28rpx;
+  color: #333333;
+}
+.city-con{
+  color: #666666;
+  font-size: 28rpx;
+  margin-left: 35rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.city-con text{
+  margin-right: 16rpx;
+}
+
